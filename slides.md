@@ -21,16 +21,17 @@ style: |
   section.chapter {
     text-align: center;
     justify-content: center;
-    background: #2c3e50;
     color: white;
   }
   section.chapter h1 {
     font-size: 2em;
     color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   }
   section.chapter h2 {
     color: #ecf0f1;
     font-weight: normal;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   }
   blockquote {
     border-left: 4px solid #e74c3c;
@@ -47,6 +48,8 @@ style: |
 ---
 
 <!-- _class: title -->
+
+![bg opacity:.3](https://images.unsplash.com/photo-1744854185466-cf95c3064cec?w=1920&q=80)
 
 # 어디까지 올라가는 거예요?
 
@@ -98,6 +101,8 @@ Naru Webinar | 2026.03.03
 
 <!-- _class: chapter -->
 
+![bg brightness:.4](https://images.unsplash.com/photo-1759310610325-2c7cb621e5e3?w=1920&q=80)
+
 # 체크리스트 1
 ## 솔직해질 수 있어야 한다
 
@@ -148,6 +153,8 @@ Naru Webinar | 2026.03.03
 ---
 
 <!-- _class: chapter -->
+
+![bg brightness:.4](https://images.unsplash.com/photo-1562907550-096d3bf9b25c?w=1920&q=80)
 
 # 체크리스트 2
 ## 퇴근 후에 공부할 수 있어야 한다
@@ -215,6 +222,8 @@ Naru Webinar | 2026.03.03
 
 <!-- _class: chapter -->
 
+![bg brightness:.4](https://images.unsplash.com/photo-1537639189802-a73b21f050fa?w=1920&q=80)
+
 # 체크리스트 3
 ## 회사가 인생의 전부가 아니어야 한다
 
@@ -267,6 +276,8 @@ Naru Webinar | 2026.03.03
 
 <!-- _class: chapter -->
 
+![bg brightness:.4](https://images.unsplash.com/photo-1722475996685-53184f6f038f?w=1920&q=80)
+
 # 체크리스트 4
 ## 내 전략이 통하는 회사여야 한다
 
@@ -318,6 +329,8 @@ Naru Webinar | 2026.03.03
 
 <!-- _class: chapter -->
 
+![bg brightness:.4](https://images.unsplash.com/photo-1556031190-a301a28c7dc0?w=1920&q=80)
+
 # 정리
 
 ---
@@ -349,8 +362,14 @@ Naru Webinar | 2026.03.03
 
 <!-- _class: title -->
 
+![bg opacity:.2](https://images.unsplash.com/photo-1556031190-a301a28c7dc0?w=1920&q=80)
+
 # 감사합니다
 
 질문이 있으시면 말씀해주세요
 
 **Naru** | 일본 취업 플랫폼
+
+<!--
+Images from Unsplash (Free License)
+-->

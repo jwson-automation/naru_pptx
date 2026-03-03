@@ -7,13 +7,21 @@
     "preview": "marp slides.md --preview",
     "html": "marp slides.md -o slides.html",
     "pdf": "marp slides.md -o slides.pdf",
-    "pptx": "marp slides.md -o slides.pptx"
+    "pptx": "marp slides.md -o slides.pptx",
+    "slidev": "slidev slidev.md",
+    "slidev:build": "slidev build slidev.md",
+    "slidev:export": "slidev export slidev.md",
+    "reveal": "npx http-server . -p 3030 -o /reveal.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@marp-team/marp-cli": "^4.2.3"
+    "@marp-team/marp-cli": "^4.2.3",
+    "@slidev/cli": "^52.14.1",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
+    "reveal.js": "^5.2.1"
   }
 }
