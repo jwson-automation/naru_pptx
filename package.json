@@ -1,0 +1,19 @@
+{
+  "name": "naru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preview": "marp slides.md --preview",
+    "html": "marp slides.md -o slides.html",
+    "pdf": "marp slides.md -o slides.pdf",
+    "pptx": "marp slides.md -o slides.pptx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  }
+}
