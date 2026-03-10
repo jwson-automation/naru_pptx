@@ -46,9 +46,12 @@ jobs:
             --output output.pptx \
             --allow-local-files
 
-      - name: Get branch name
+      - name: Get branch name (slash → dash)
         id: branch
-        run: echo "name=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        run: |
+          RAW="${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
+          CLEAN="${RAW//\//-}"
+          echo "name=${CLEAN}" >> $GITHUB_OUTPUT
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
