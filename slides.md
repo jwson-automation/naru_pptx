@@ -3,6 +3,7 @@ marp: true
 theme: default
 paginate: true
 style: |
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
   section {
     font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
     font-size: 28px;
@@ -33,6 +34,25 @@ style: |
     font-weight: normal;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   }
+  section.naru {
+    background: #4285F4;
+    color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  section.naru h1 {
+    font-size: 2.4em;
+    color: white;
+    font-weight: 900;
+  }
+  section.naru h2 {
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    font-size: 1.3em;
+  }
+  section.naru p {
+    color: rgba(255,255,255,0.8);
+  }
   blockquote {
     border-left: 4px solid #e74c3c;
     padding-left: 1em;
@@ -41,6 +61,10 @@ style: |
   }
   strong {
     color: #e74c3c;
+  }
+  .naru-strong {
+    color: #4285F4;
+    font-weight: 700;
   }
   table {
     font-size: 0.85em;
@@ -360,6 +384,31 @@ Naru Webinar | 2026.03.03
 
 ---
 
+<!-- _class: naru -->
+
+# NARU.
+
+## 일본 커리어의 시작
+
+채용 공고 · 기업 정보 · 이벤트 · 멘토링
+
+**naru-recruit.com**
+
+---
+
+## 나루가 도와줄 수 있는 것
+
+이 4가지 체크리스트, 나루가 옆에서 지원합니다.
+
+| 체크리스트 | 나루 활용 |
+|-----------|----------|
+| 솔직함 → 신뢰 | **멘토링** — 현직자에게 직접 물어보고 준비하기 |
+| 퇴근 후 공부 | **이벤트** — 세미나·밋업으로 네트워크 & 인사이트 |
+| 떠날 수 있는 힘 | **채용공고** — 언제든 선택지를 열어두기 |
+| 맞는 회사 찾기 | **기업 정보** — 평가 제도·복리후생 사전 리서치 |
+
+---
+
 <!-- _class: title -->
 
 ![bg opacity:.2](https://images.unsplash.com/photo-1556031190-a301a28c7dc0?w=1920&q=80)
@@ -368,8 +417,4 @@ Naru Webinar | 2026.03.03
 
 질문이 있으시면 말씀해주세요
 
-**Naru** | 일본 취업 플랫폼
-
-<!--
-Images from Unsplash (Free License)
--->
+**Naru** | 일본 취업 플랫폼 | naru-recruit.com
