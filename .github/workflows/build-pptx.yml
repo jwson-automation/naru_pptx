@@ -1,0 +1,79 @@
+name: 📊 Build PPT (Marp)
+
+on:
+  push:
+    branches:
+      - 'feat/**'
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Marp → PDF & PPTX
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Korean/Japanese fonts
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y fonts-noto-cjk
+          fc-cache -fv
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Build PDF
+        run: |
+          marp slides.md \
+            --pdf \
+            --output output.pdf \
+            --allow-local-files
+
+      - name: Build PPTX
+        run: |
+          marp slides.md \
+            --pptx \
+            --output output.pptx \
+            --allow-local-files
+
+      - name: Get branch name (slash → dash)
+        id: branch
+        run: |
+          RAW="${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
+          CLEAN="${RAW//\//-}"
+          echo "name=${CLEAN}" >> $GITHUB_OUTPUT
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: NARU-PPT-${{ steps.branch.outputs.name }}-PDF
+          path: output.pdf
+          retention-days: 30
+
+      - name: Upload PPTX
+        uses: actions/upload-artifact@v4
+        with:
+          name: NARU-PPT-${{ steps.branch.outputs.name }}-PPTX
+          path: output.pptx
+          retention-days: 30
+
+      - name: Summary
+        run: |
+          echo "## 📊 빌드 완료: \`${{ steps.branch.outputs.name }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| 파일 | 용도 |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|------|" >> $GITHUB_STEP_SUMMARY
+          echo "| output.pdf | 공유·인쇄용 PDF |" >> $GITHUB_STEP_SUMMARY
+          echo "| output.pptx | PowerPoint 편집용 |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "> **Actions 탭 → 이 실행 → Artifacts** 에서 다운로드하세요." >> $GITHUB_STEP_SUMMARY

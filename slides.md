@@ -2,157 +2,226 @@
 marp: true
 theme: default
 paginate: true
-backgroundColor: '#ffffff'
 style: |
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-  * { font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif; }
-  section { font-size: 26px; color: #1a1a1a; padding: 48px 64px; }
-  h1 { font-size: 52px; font-weight: 900; line-height: 1.2; }
-  h2 { font-size: 36px; font-weight: 700; border-bottom: 3px solid #4285F4; padding-bottom: 12px; margin-bottom: 24px; }
-  h3 { font-size: 24px; font-weight: 700; color: #4285F4; margin-bottom: 10px; }
-  p, li { line-height: 1.9; color: #333; }
-  strong { color: #e74c3c; font-weight: 700; }
-  blockquote { border-left: 4px solid #e74c3c; padding: 12px 20px; background: #fff5f5; border-radius: 0 8px 8px 0; color: #444; font-style: italic; }
-  table { font-size: 0.88em; }
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 16px; }
-  .check { background: #f0f7ff; border-left: 4px solid #4285F4; border-radius: 0 8px 8px 0; padding: 14px 20px; margin: 8px 0; font-size: 22px; }
-  .naru { background: #EEF3FF; border-left: 4px solid #4285F4; border-radius: 0 8px 8px 0; padding: 14px 20px; margin: 12px 0; font-size: 20px; }
-  .num { font-size: 80px; font-weight: 900; color: #4285F4; line-height: 1; }
-  section.cover { background: linear-gradient(160deg, #0f2027 0%, #203a43 50%, #2c5364 100%); color: #fff; }
-  section.cover h1 { color: #fff; font-size: 58px; }
-  section.cover p { color: rgba(255,255,255,0.7); font-size: 22px; }
-  section.chapter { background: #1a1a2e; color: #fff; display: flex; flex-direction: column; justify-content: center; text-align: center; }
-  section.chapter h1 { color: #fff; font-size: 52px; }
-  section.chapter h2 { color: rgba(255,255,255,0.8); border: none; font-weight: 400; font-size: 28px; }
-  section.closing { background: #4285F4; color: #fff; }
-  section.closing h2 { color: #fff; border-color: rgba(255,255,255,0.4); }
-  section.closing p, section.closing li { color: rgba(255,255,255,0.9); }
-  section.closing strong { color: #fff; font-weight: 900; }
-  section.closing blockquote { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.6); color: rgba(255,255,255,0.9); }
+  section {
+    font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+    font-size: 28px;
+  }
+  section.title {
+    text-align: center;
+    justify-content: center;
+  }
+  section.title h1 { font-size: 2.2em; }
+  section.title h2 { font-size: 1.4em; color: #555; }
+  section.chapter {
+    text-align: center;
+    justify-content: center;
+    color: white;
+  }
+  section.chapter h1 {
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  }
+  section.chapter h2 {
+    color: #ecf0f1;
+    font-weight: normal;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  }
+  section.naru-chapter {
+    background: #4285F4;
+    color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  section.naru-chapter h1 { font-size: 2em; color: white; }
+  section.naru-chapter h2 { color: rgba(255,255,255,0.85); font-weight: 400; }
+  section.naru-closing {
+    background: #4285F4;
+    color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  section.naru-closing h1 { font-size: 2.4em; color: white; font-weight: 900; }
+  section.naru-closing h2 { color: rgba(255,255,255,0.85); font-weight: 400; }
+  section.naru-closing p { color: rgba(255,255,255,0.8); }
+  blockquote {
+    border-left: 4px solid #e74c3c;
+    padding-left: 1em;
+    color: #555;
+    font-style: italic;
+  }
+  strong { color: #e74c3c; }
+  .naru-tip {
+    background: #EEF3FF;
+    border-left: 4px solid #4285F4;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 20px;
+    margin: 12px 0;
+    font-size: 0.9em;
+    color: #333;
+  }
+  table { font-size: 0.85em; }
 ---
+<!-- _class: title -->
 
-<!-- _class: cover -->
+![bg opacity:.3](https://images.unsplash.com/photo-1744854185466-cf95c3064cec?w=1920&q=80)
 
-![bg opacity:.25](https://images.unsplash.com/photo-1744854185466-cf95c3064cec?w=1920&q=80)
+# 어디까지 올라가는 거예요?
 
-# 어디까지  
-올라가는 거예요?
+## 일본 IT 엔지니어를 위한 연봉 성장 전략
 
-일본 IT 엔지니어를 위한 연봉 성장 전략
-
-<br>
-<p>Naru Webinar · 2026</p>
-
+Naru Webinar | 2026.03.03
 ---
 
 ## 자기소개
 
-대학 졸업 → 한국 네비게이션 SW 회사 **3년** 근무  
+대학 졸업 → 한국 네비게이션 SW 회사 **3년** 근무
 → 코딩에 빠져 퇴사 → **SSAFY** → 모바일 엔지니어로 **일본 진출**
 
-<br>
+|  | 한국 | 일본 (1사) | 일본 (2사) |
+|--|------|-----------|-----------|
+| 성과 | 팀 1등, 성과급 ~2000만원 | 실무 경험 축적 | 연봉 **약 2배** 상승 |
 
-| | 한국 | 일본 1사 | 일본 2사 |
-|--|------|---------|---------|
-| 성과 | 팀 1등, 성과급 ~2000만원 | 실무 경험 축적 | 연봉 **약 2배 상승** |
-
-<br>
-
-지금은 모바일 엔지니어이자,  
-일본 취업 플랫폼 **나루(Naru)** 를 운영하고 있습니다.
-
+지금은 모바일 엔지니어이자,
+사이드 프로젝트로 일본 취업 플랫폼 **나루(Naru)** 를 운영하고 있습니다.
 ---
 
 ## 오늘 하지 않을 이야기
 
 - 좋은 회사 고르는 법
+- 좋은 일 하는 법
 - 훌륭한 일본 생활 하는 법
-- 일본어 공부법
 
-<br>
-
-> 오늘은 다들 더럽지만 피할 수 없는 **돈**.  
-> 그 돈을 회사에서 뽑아먹는 방법에 대해서  
+> 오늘은 다들 더럽지만 피할 수 없는 **돈**.
+> 그 돈을 회사에서 뽑아먹는 방법에 대해서
 > 경험적 사례와 함께 이야기합니다.
-
 ---
 
-## 4가지 체크리스트
+## 오늘의 체크리스트
 
-| # | 체크리스트 | 키워드 |
-|---|-----------|--------|
-| **1** | 솔직해질 수 있어야 한다 | 면접 · 협상 |
-| **2** | 퇴근 후에 공부할 수 있어야 한다 | 차별화 · 레버리지 |
-| **3** | 회사가 인생의 전부가 아니어야 한다 | 주도권 · 멘탈 |
-| **4** | 내 전략이 통하는 회사여야 한다 | 환경 선택 |
+| # | 체크리스트 | 핵심 키워드 |
+|---|-----------|-----------|
+| 1 | 솔직해질 수 있어야 한다 | 면접 · 협상 |
+| 2 | 퇴근 후에 공부할 수 있어야 한다 | 차별화 · 레버리지 |
+| 3 | 회사가 인생의 전부가 아니어야 한다 | 주도권 · 멘탈 |
+| 4 | 내 전략이 통하는 회사여야 한다 | 환경 선택 |
 
-<br>
-
-하나라도 빠지면 전략은 무너집니다.  
+하나라도 빠지면 전략은 무너집니다.
 **네 가지 모두** 갖춰야 연봉이 올라갑니다.
-
 ---
 
 <!-- _class: chapter -->
 
-<div class="num">1</div>
+![bg brightness:.4](https://images.unsplash.com/photo-1759310610325-2c7cb621e5e3?w=1920&q=80)
 
-# 솔직해질 수 있어야 한다
-## 실력 → 신뢰 → 협상력
+# 체크리스트 1
+## 솔직해질 수 있어야 한다
+
+---
+
+## 왜 솔직함인가
+
+면접에서 솔직하기 위해 필요한 것 → **실력**
+
+- 솔직함은 **무례함**이 되기 쉽다
+- 가고 싶은 회사, 높은 급여 앞에서 솔직함을 유지하기는 어렵다
+
+하지만
+
+- **객관화**가 잘 된 지원자가
+- **회사의 상황**을 이해하고 있다면
+
+→ 솔직함은 무례가 아니라 **신뢰**가 된다
 
 ---
 
 ## 솔직함이 무기가 된 순간
 
-최종 면접에서 이렇게 말했습니다.
+최종 면접에서 한 이야기:
 
-> "사실 이 회사에 대해서 잘 모르는 상태에서 지원 제안을 받았습니다.  
-> 작은 스타트업이라 생각하고 지원했는데,  
+> "사실 이 회사에 대해서 잘 모르는 상태에서 지원 제안을 받았습니다.
+> 작은 스타트업이라 생각하고 지원했는데,
 > 1차 면접 후 제가 생각했던 것보다 훨씬 거대한 회사라는 것을 알게 되었습니다."
-
-<br>
 
 면접관(리더)의 반응:
 
 → **"이 사람은 거짓말을 하고 있지 않다"** 고 강하게 확신
 
-**솔직함은 실력이 뒷받침될 때 신뢰가 됩니다.**
+---
 
+## 솔직함 → 연봉과 어떻게 연결되는가
+
+솔직함을 받아주는 회사에 들어가면:
+
+- 연봉 협상 때 **원하는 숫자를 직접 말할 수 있다**
+- 업무 범위를 **솔직하게 조율**할 수 있다
+- 성과 면담에서 **기여를 투명하게 어필**할 수 있다
+- 관계 구축에 에너지를 낭비하지 않아 **성과에 집중**할 수 있다
+
+이야기할 필요 없는 이야기는 하지 않되,
+해야 할 이야기는 **진솔하게** 하는 것.
 ---
 
 <!-- _class: chapter -->
 
-<div class="num">2</div>
+![bg brightness:.4](https://images.unsplash.com/photo-1562907550-096d3bf9b25c?w=1920&q=80)
 
-# 퇴근 후에 공부할 수 있어야 한다
-## 차별화 · 레버리지
+# 체크리스트 2
+## 퇴근 후에 공부할 수 있어야 한다
+
+---
+
+## 불편한 현실
+
+20대~30대 초반, 당신의 동료 중 몇몇은 퇴근 후에 자기 학습을 합니다.
+
+> 회사를 사랑해서가 아닙니다.
+> **당신보다 더 잘한다는 걸 증명하기 위해서**입니다.
+
+같은 연차, 같은 직급인데 한쪽만 승진하거나 연봉이 올랐다면
+그 차이는 대부분 **업무 시간 밖**에서 만들어진 것입니다.
 
 ---
 
 ## 퇴근 후 공부의 방향
 
-하기 싫은 노력을 하라는 것이 아닙니다.  
-**좋아하는 노력**을 퇴근 후에 할 수 있다면 — 포텐셜은 2배, 3배가 됩니다.
+하기 싫은 노력을 하라는 것이 **아닙니다**.
 
-| 방향 | 레버리지 효과 |
-|------|-------------|
-| 언어 능력 향상 | 고객 대면 가능 → 역할 확대 |
-| 기술 확장 | 풀스택 → 희소가치 상승 |
-| 강의·블로그·OSS | 채용 시장 인지도 |
-| 네트워크 | 비즈니스 감각 + 이직 옵션 |
+**좋아하는 노력**을 퇴근 후에 할 수 있다면
+→ 포텐셜은 **2배, 3배**가 됩니다.
 
-<div class="naru">
-🔵 사이드 프로젝트로 만든 것이 <strong>나루(Naru)</strong> — 엔지니어가 서비스를 운영하면 연봉 협상 카드가 됩니다
-</div>
+| 방향 | 예시 |
+|------|------|
+| 언어 능력 | 일본어 향상 → 고객 대면 가능 → 역할 확대 |
+| 기술 확장 | 서버/인프라 학습 → 풀스택 → 희소가치 상승 |
+| 외부 활동 | 강의·블로그·OSS → 채용 시장에서 인지도 |
+| 네트워크 | 영업·마케터와 교류 → 비즈니스 감각 습득 |
 
+---
+
+## 내 사례 - 온라인 강의 & 사이드 프로젝트
+
+취준생 시절 프로그래밍 강의 진행 → 수강생 약 **2,000명**
+
+→ 면접에서 **"이 사람을 데려가고 싶은 이유"** 가 하나 더
+
+퇴사 후 **3년째** 사이드 프로젝트 진행 중:
+
+- 병원 입원 아이들을 위한 **편지 교환 서비스**
+- 앱을 처음 만드는 사람을 위한 **해커톤** 운영
+- 일본 취업 플랫폼 **나루(Naru)**
+
+**할 수 있는 영역이 넓다는 것 자체가 연봉 협상의 카드**가 됩니다.
 ---
 
 <!-- _class: chapter -->
 
-<div class="num">3</div>
+![bg brightness:.4](https://images.unsplash.com/photo-1537639189802-a73b21f050fa?w=1920&q=80)
 
-# 회사가 인생의 전부가 아니어야 한다
-## 주도권 · 멘탈
+# 체크리스트 3
+## 회사가 인생의 전부가 아니어야 한다
 
 ---
 
@@ -164,58 +233,139 @@ style: |
 
 이 자신감은 허세가 아니라 **근거**에서 옵니다.
 
+- 사이드 프로젝트로 **수익원이 여러 개**이거나
+- 이직 시장에서 **언제든 오퍼를 받을 수 있는 실력**이거나
+- 최소한 **6개월은 버틸 수 있는 저축**이 있거나
+
 | 전략 | 효과 |
 |------|------|
-| 이직 시장 감각 유지 | 스카우트 오퍼 언제든 받을 수 있는 상태 |
-| 사이드 인컴 확보 | 회사 외 수입원으로 협상 레버리지 확보 |
-| 저축 & 투자 | 6개월 생활비 안전망 |
-| 커뮤니티 네트워크 | 다음 이직 경로를 항상 열어두기 |
-
+| 이직 시장 감각 유지 | 면접 감각, 스카우트 오퍼 상시 수신 |
+| 사이드 인컴 확보 | 부업·프리랜스 등 회사 외 수입원 |
+| 저축 & 투자 | 생활비 6개월분 이상의 안전망 |
 ---
 
 <!-- _class: chapter -->
 
-<div class="num">4</div>
+![bg brightness:.4](https://images.unsplash.com/photo-1722475996685-53184f6f038f?w=1920&q=80)
 
-# 내 전략이 통하는 회사여야 한다
-## 환경 선택
-
----
-
-## 면접에서 꼭 물어봐야 할 것들
-
-- "평가 기준은 무엇인가요?"
-- "같은 직급 내에서 연봉 차이가 있나요?"
-- "최근 승진한 분의 사례를 알 수 있을까요?"
-- "1on1 미팅이나 피드백 문화가 있나요?"
-
-<br>
-
-이 질문들에 **구체적으로 답할 수 있는 회사**가  
-당신의 전략이 통하는 회사입니다.
-
-<div class="naru">
-🔵 <strong>나루 멘토링</strong>에서 기업 문화를 먼저 알고 지원하세요 — 현직자가 솔직하게 알려줍니다
-</div>
+# 체크리스트 4
+## 내 전략이 통하는 회사여야 한다
 
 ---
 
-<!-- _class: closing -->
+## 전략이 통하는 회사의 조건 & 면접 질문
+
+| 조건 | 확인 방법 |
+|------|----------|
+| 성과 기반 보상 | 면접에서 평가 제도 직접 질문 |
+| 연봉 협상 여지 | 오퍼 단계에서 희망 연봉 제시 가능 여부 |
+| 솔직한 문화 | 면접관의 태도, 1on1 문화 유무 |
+| 성장 가능한 역할 | 역할 범위 확장 가능성, 직급 체계 |
+
+꼭 물어봐야 할 것들:
+- "**평가 기준**은 무엇인가요?"
+- "같은 직급 내에서 **연봉 차이**가 있나요?"
+- "**1on1 미팅**이나 피드백 문화가 있나요?"
+
+> 대답을 못 하거나 불쾌해하는 회사라면 연봉을 올리기 어렵습니다.
+---
+
+<!-- _class: chapter -->
+
+![bg brightness:.4](https://images.unsplash.com/photo-1556031190-a301a28c7dc0?w=1920&q=80)
+
+# 정리
+
+---
+
+## 네 가지 체크리스트
+
+| # | 체크리스트 | 한 줄 요약 |
+|---|-----------|-----------|
+| 1 | 솔직해질 수 있어야 한다 | 실력이 뒷받침된 솔직함은 **신뢰**가 된다 |
+| 2 | 퇴근 후에 공부할 수 있어야 한다 | 업무 밖의 노력이 **차별화**를 만든다 |
+| 3 | 회사가 인생의 전부가 아니어야 한다 | 떠날 수 있는 사람이 **주도권**을 갖는다 |
+| 4 | 내 전략이 통하는 회사여야 한다 | 환경이 맞아야 **전략이 작동**한다 |
+
+---
 
 ## 연봉은 "부탁"이 아니라 "교환"입니다
 
-<br>
-
-> 내가 제공하는 가치에 대한 **정당한 대가**를 요구하는 것.  
+> 내가 제공하는 가치에 대한 **정당한 대가**를 요구하는 것.
 > 그것이 연봉 협상입니다.
-
-<br>
 
 솔직해지고, 준비하고, 의존하지 않고, 환경을 고르세요.
 
 **연봉은 따라오게 되어 있습니다.**
+---
 
-<br>
-<br>
+<!-- _class: naru-chapter -->
 
-**🌐 naru-recruit.com** | 일본 취업 플랫폼 나루
+# 일본에서 살아남기
+## 연봉 전략 이전에 알아야 할 것들
+
+---
+
+## 첫 해가 모든 것을 결정합니다
+
+연봉 전략을 실행하려면 먼저 일본에서 **버텨야** 합니다.
+
+많은 분들이 일본 취업 후 첫 해에 예상치 못한 벽에 부딪힙니다.
+
+| 현실 | 대응 |
+|------|------|
+| 언어 장벽이 생각보다 높다 | 회의 녹음·복기, 일본인과 점심 |
+| 직장 문화가 낯설다 | 확인하고 일하기, 합의 문화 이해 |
+| 아는 사람이 없다 | 온·오프라인 커뮤니티 적극 참여 |
+| 외로움이 크다 | 한국인 커뮤니티, 정기 밋업 참여 |
+
+> 첫 해를 버티는 사람이 결국 일본에서 성공합니다.
+
+---
+
+## 직장 문화 — 한국 vs 일본
+
+| | 한국 | 일본 |
+|--|------|------|
+| 의사결정 | 빠른 탑다운 | 느린 합의(根回し) 중심 |
+| 피드백 | 직접적 | 돌려 말하는 경향 |
+| 실수 문화 | 질책 | 재발 방지 중심 |
+| 야근 | 눈치 야근 | 최근은 줄어드는 추세 |
+
+**핵심**: 모르면 확인하고, 알아서 하지 말고 물어보는 것이 일본에서의 신뢰를 만듭니다.
+
+---
+
+## 커뮤니티가 생존을 결정합니다
+
+일본에서 귀국하는 분의 대부분은 실력이 아니라 **외로움** 때문입니다.
+
+- **온라인**: 재일 한국인 SNS, X(트위터) IT 커뮤니티, Discord
+- **오프라인**: Meetup, 사내 동호회, 채용 이벤트
+
+<div class="naru-tip">
+🔵 나루 이벤트 페이지에서 설명회·세미나·밋업을 확인하고<br>
+취업 전부터 일본 현지 네트워크를 만들어 두세요.
+</div>
+---
+
+<!-- _class: naru-closing -->
+
+# NARU.
+
+## 일본 커리어의 시작
+
+채용 공고 · 기업 정보 · 이벤트 · 멘토링
+
+**naru-recruit.com**
+---
+
+<!-- _class: title -->
+
+![bg opacity:.2](https://images.unsplash.com/photo-1556031190-a301a28c7dc0?w=1920&q=80)
+
+# 감사합니다
+
+질문이 있으시면 말씀해주세요
+
+**Naru** | 일본 취업 플랫폼 | naru-recruit.com
